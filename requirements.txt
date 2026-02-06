@@ -1,0 +1,9 @@
+Pillow
+pytesseract
+langchain
+langchain-openai
+python-dotenv
+llmwhisperer-client
+pdf2image
+openpyxl
+landingai-ade
