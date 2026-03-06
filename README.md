@@ -27,7 +27,7 @@ result = client.whisper(
     wait_for_completion=True,
     wait_timeout=300,
     output_mode="layout_preserving",
-    mode="form"          # or "table", "high_quality"
+    mode="form"
 )
 
 text = result["extraction"]["result_text"]
@@ -213,18 +213,6 @@ text = result["extraction"]["result_text"]
 ```
 
 > LLMWhisperer processes Excel files natively (no image conversion needed), preserving merged headers and table structure so the data can be directly consumed by an LLM for analysis or Q&A.
-
----
-
-## Extraction Modes
-
-LLMWhisperer supports three `mode` values — choose based on your document type:
-
-| Mode | Best For | Preserves Checkboxes | Speed |
-|------|----------|---------------------|-------|
-| `form` | Structured forms, tax documents | ✅ Yes | Moderate |
-| `table` | Spreadsheets, tabular data, logistics | — | Moderate |
-| `high_quality` | General documents where accuracy > structure | ❌ No | Faster |
 
 ---
 
